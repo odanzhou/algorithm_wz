@@ -12,6 +12,9 @@ const navList = [
   }, {
     name: 'Array',
     to: '/array',
+  }, {
+    name: 'Application',
+    to: '/app',
   },
 ]
 

@@ -1,10 +1,6 @@
 import { memo } from 'react';
-import { Link } from 'umi';
-
-type NavType = {
-  name: string,
-  to: string
-}
+import ALink from '@/components/link/ALink'
+import type { NavType } from '@/components/link/ALink'
 
 type NavListProps = {
   list: NavType[],
@@ -22,7 +18,7 @@ const NavList = (props: NavListProps) => {
         list.map(({ name, to }) => {
           return (
             <li key={to}>
-              {to?.startsWith('http') ? <a href={to} target="_blank">{name}</a> : <Link to={to}>{name}</Link>}
+              <ALink to={to} name={name} />
             </li>
           )
         })
